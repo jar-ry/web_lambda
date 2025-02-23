@@ -1,8 +1,8 @@
 import json
 
 def lambda_handler(event, context):
-    # TODO implement
+    body = event['body']
     return {
         'statusCode': 200,
-        'body': json.dumps(event)
+        'body': json.dumps(body)
     }
