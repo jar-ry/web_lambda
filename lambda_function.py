@@ -14,7 +14,7 @@ def lambda_handler(event, context):
             "statusCode": 400,
             "headers": {
                 "Access-Control-Allow-Headers": "Content-Type",
-                "Access-Control-Allow-Methods": "OPTIONS, POST"
+                "Access-Control-Allow-Methods": "POST"
             },
             "body": json.dumps({"message": "Invalid JSON"})
         }
@@ -25,7 +25,7 @@ def lambda_handler(event, context):
             "statusCode": 200,
             "headers": {
                 "Access-Control-Allow-Headers": "Content-Type",
-                "Access-Control-Allow-Methods": "OPTIONS, POST"
+                "Access-Control-Allow-Methods": "POST"
             },
             "body": json.dumps({"api_key": open_ai_key})
         }
@@ -34,7 +34,7 @@ def lambda_handler(event, context):
             "statusCode": 403,
             "headers": {
                 "Access-Control-Allow-Headers": "Content-Type",
-                "Access-Control-Allow-Methods": "OPTIONS, POST"
+                "Access-Control-Allow-Methods": "POST"
             },
             "body": json.dumps({"message": "fail"})
         }
