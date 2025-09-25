@@ -18,7 +18,7 @@ def lambda_handler(event, context):
             },
             "body": json.dumps({"message": "Invalid JSON"})
         }
-    print(correct_password)
+
     # Validate password
     if input_password == correct_password:
         return {
@@ -36,5 +36,5 @@ def lambda_handler(event, context):
                 "Access-Control-Allow-Headers": "Content-Type",
                 "Access-Control-Allow-Methods": "POST"
             },
-            "body": json.dumps({"message": "fail input " + input_password})
+            "body": json.dumps({"message": "fail input " + input_password + " " + correct_password})
         }
