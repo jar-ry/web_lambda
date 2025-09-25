@@ -3,7 +3,7 @@ import os
 
 def lambda_handler(event, context):
     open_ai_key = os.getenv("OPEN_AI_KEY")
-    correct_password = os.getenv("WEB_PASSWORD")
+    correct_password = os.getenv("WEB_PASSWORD") # Password in AWS Lambda env
 
     # Parse the request body (assuming it's JSON)
     try:
@@ -36,5 +36,5 @@ def lambda_handler(event, context):
                 "Access-Control-Allow-Headers": "Content-Type",
                 "Access-Control-Allow-Methods": "POST"
             },
-            "body": json.dumps({"message": "fail input " + input_password + " " + correct_password})
+            "body": json.dumps({"message": "fail input"})
         }
